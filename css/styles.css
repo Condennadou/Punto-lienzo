@@ -1,3 +1,45 @@
+.navbar {
+  
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 15px 0;
+  position: fixed;
+background: rgba(62,58,52,0.9);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LINKS */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fffaf3;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* BOTÓN */
+.nav-btn {
+  background: #fffaf3;
+  color: #3e3a34 !important;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.nav-btn:hover {
+  background: #e6dccb;
+}
 * {
   margin: 0;
   padding: 0;
@@ -19,25 +61,77 @@ body {
 }
 
 /* Hero */
+/* HERO NUEVO CON IMAGEN */
 .hero {
-  background: #fffaf3;
-  padding: 80px 0;
+  height: 100vh;
+  background: url('../img/banner.png') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  border-bottom: 1px solid #e6dccb;
+  border-bottom: none;
+  padding: 0;
 }
 
-.hero h1 {
-  font-size: 2.8rem;
+/* CAPA OSCURA SUAVE (para que se lea el texto) */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(62, 58, 52, 0.45); /* tono acorde a tu paleta */
+}
+
+/* CONTENIDO */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fffaf3;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero-content h2 {
+  font-size: 2.6rem;
   margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #f0e9dc;
+}
+
+/* LOGO ARRIBA IZQUIERDA */
+.logo-img {
+  height: 55px;
+  color: #f0e9dc;
+  opacity: 0.40;
+}
+.top-bar {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  z-index: 3;
+}
+
+.logo {
+  color: #fffaf3;
+  font-size: 1.5rem;
+  font-weight: 600;
   letter-spacing: 2px;
 }
 
-.lead {
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-  color: #6e665c;
+/* BOTÓN EN HERO (ligeramente distinto para contraste) */
+.hero .btn-primary {
+  background: #fffaf3;
+  color: #3e3a34;
 }
 
+.hero .btn-primary:hover {
+  background: #e6dccb;
+}
 /* Cards */
 .services-highlight {
   display: flex;
