@@ -1,11 +1,24 @@
 .navbar {
-  
   top: 0;
   width: 100%;
   z-index: 10;
   padding: 15px 0;
   position: fixed;
-background: rgba(62,58,52,0.9);
+  background: rgba(62,58,52,0.9);
+}
+.logo-img {
+  height: 115px;
+  width: auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.15);
+}
+.navbar {
+  padding: 10px 0;
 }
 
 .nav-container {
@@ -40,6 +53,7 @@ background: rgba(62,58,52,0.9);
 .nav-btn:hover {
   background: #e6dccb;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -49,7 +63,7 @@ background: rgba(62,58,52,0.9);
 /* Base */
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #f5f0e6; /* beige claro */
+  background-color: #f5f0e6;
   color: #3e3a34;
   line-height: 1.6;
 }
@@ -60,8 +74,7 @@ body {
   padding: 0 20px;
 }
 
-/* Hero */
-/* HERO NUEVO CON IMAGEN */
+/* ====================== HERO ====================== */
 .hero {
   height: 100vh;
   background: url('../img/banner.png') center/cover no-repeat;
@@ -70,76 +83,67 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  border-bottom: none;
   padding: 0;
 }
 
-/* CAPA OSCURA SUAVE (para que se lea el texto) */
+/* Capa blanca suave (para fondo claro con muchas bolsas) */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(62, 58, 52, 0.45); /* tono acorde a tu paleta */
+  background: rgba(255, 255, 255, 0.85); /* Fondo blanco semitransparente */
 }
 
-/* CONTENIDO */
+/* CONTENIDO DEL HERO - TEXTO NEGRO */
 .hero-content {
   position: relative;
   z-index: 2;
-  color: #fffaf3;
+  color: #1f1f1f;           /* Negro elegante */
   max-width: 700px;
   padding: 20px;
 }
 
 .hero-content h2 {
-  font-size: 2.6rem;
-  margin-bottom: 15px;
-  letter-spacing: 1px;
+  font-size: 2.8rem;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+  font-weight: 600;
+  line-height: 1.1;
 }
 
 .hero-content p {
-  font-size: 1.1rem;
-  margin-bottom: 25px;
-  color: #f0e9dc;
+  font-size: 1.15rem;
+  margin-bottom: 30px;
+  color: #3e3a34;           /* Negro más suave */
+  font-weight: 400;
 }
 
-/* LOGO ARRIBA IZQUIERDA */
-.logo-img {
-  height: 55px;
-  color: #f0e9dc;
-  opacity: 0.40;
-}
-.top-bar {
-  position: absolute;
-  top: 20px;
-  left: 30px;
-  z-index: 3;
+/* Fuente minimalista adicional para el título */
+.hero-content h2 {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-.logo {
-  color: #fffaf3;
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-}
-
-/* BOTÓN EN HERO (ligeramente distinto para contraste) */
+/* BOTÓN EN HERO */
 .hero .btn-primary {
-  background: #fffaf3;
-  color: #3e3a34;
+  background: #3e3a34;
+  color: #fffaf3;
+  padding: 14px 32px;
+  font-weight: 600;
 }
 
 .hero .btn-primary:hover {
-  background: #e6dccb;
+  background: #2c2925;
+  transform: translateY(-2px);
 }
-/* Cards */
-.services-highlight {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
+
+/* LOGO */
+.logo-img {
+  height: 115px;
+  color: #f0e9dc;
+  opacity: 0.40;
 }
+
+/* ====================== RESTO DEL CSS (sin cambios) ====================== */
 
 .service-card {
   background: #ffffff;
@@ -245,28 +249,7 @@ body {
   border: 1px solid #e6dccb;
 }
 
-.service-icon {
-  width: 40px;
-  height: 40px;
-  background: #e8dfcf;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  margin-bottom: 15px;
-  font-weight: bold;
-}
-
-.service-block ul {
-  list-style: none;
-  margin-top: 15px;
-}
-
-.service-block ul li {
-  margin-bottom: 8px;
-}
-
-/* Contacto */
+/* Resto de estilos (contacto, footer, responsive) se mantienen igual */
 .contact-section {
   text-align: center;
 }
@@ -283,7 +266,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* Botones contacto */
 .contact-btn {
   display: inline-block;
   padding: 14px 25px;
@@ -293,7 +275,6 @@ body {
   transition: 0.3s;
 }
 
-/* WhatsApp */
 .contact-btn.whatsapp {
   background: #d6cbb7;
   color: #3e3a34;
@@ -303,7 +284,6 @@ body {
   background: #c2b59b;
 }
 
-/* Facebook */
 .contact-btn.facebook {
   background: #e8dfcf;
   color: #3e3a34;
@@ -313,7 +293,6 @@ body {
   background: #d6cbb7;
 }
 
-/* Footer */
 footer {
   background: #fffaf3;
   padding: 20px 0;
@@ -335,5 +314,9 @@ footer {
   .about-grid {
     flex-direction: column;
     align-items: center;
+  }
+  
+  .hero-content h2 {
+    font-size: 2.2rem;
   }
 }
