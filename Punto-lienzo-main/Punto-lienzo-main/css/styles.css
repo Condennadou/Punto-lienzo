@@ -1,0 +1,322 @@
+.navbar {
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 15px 0;
+  position: fixed;
+  background: rgba(62,58,52,0.9);
+}
+.logo-img {
+  height: 115px;
+  width: auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.15);
+}
+.navbar {
+  padding: 10px 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LINKS */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fffaf3;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* BOTÓN */
+.nav-btn {
+  background: #fffaf3;
+  color: #3e3a34 !important;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.nav-btn:hover {
+  background: #e6dccb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f0e6;
+  color: #3e3a34;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* ====================== HERO ====================== */
+.hero {
+  height: 100vh;
+  background: url('../img/banner.png') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+}
+
+/* Capa blanca suave (para fondo claro con muchas bolsas) */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85); /* Fondo blanco semitransparente */
+}
+
+/* CONTENIDO DEL HERO - TEXTO NEGRO */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #1f1f1f;           /* Negro elegante */
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero-content h2 {
+  font-size: 2.8rem;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.hero-content p {
+  font-size: 1.15rem;
+  margin-bottom: 30px;
+  color: #3e3a34;           /* Negro más suave */
+  font-weight: 400;
+}
+
+/* Fuente minimalista adicional para el título */
+.hero-content h2 {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* BOTÓN EN HERO */
+.hero .btn-primary {
+  background: #3e3a34;
+  color: #fffaf3;
+  padding: 14px 32px;
+  font-weight: 600;
+}
+
+.hero .btn-primary:hover {
+  background: #2c2925;
+  transform: translateY(-2px);
+}
+
+/* LOGO */
+.logo-img {
+  height: 115px;
+  color: #f0e9dc;
+  opacity: 0.40;
+}
+
+/* ====================== RESTO DEL CSS (sin cambios) ====================== */
+
+.service-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 260px;
+  border: 1px solid #e6dccb;
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.badge {
+  display: inline-block;
+  background: #e8dfcf;
+  color: #5a5347;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+}
+
+/* Botón principal */
+.btn-primary {
+  display: inline-block;
+  padding: 14px 30px;
+  background: #d6cbb7;
+  color: #3e3a34;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #c2b59b;
+}
+
+/* Sections */
+.section {
+  padding: 70px 0;
+}
+
+.section-alt {
+  background: #fffaf3;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+/* About */
+.about-grid {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-values {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.value-item {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #8a7f6a;
+}
+
+.value-item span {
+  margin-left: 10px;
+  font-weight: normal;
+  color: #3e3a34;
+}
+
+/* Servicios */
+.services-grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.service-block {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 300px;
+  border: 1px solid #e6dccb;
+}
+
+/* Resto de estilos (contacto, footer, responsive) se mantienen igual */
+.contact-section {
+  text-align: center;
+}
+
+.contact-subtitle {
+  margin-bottom: 30px;
+  color: #6e665c;
+}
+
+.contact-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 14px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.contact-btn.whatsapp {
+  background: #d6cbb7;
+  color: #3e3a34;
+}
+
+.contact-btn.whatsapp:hover {
+  background: #c2b59b;
+}
+
+.contact-btn.facebook {
+  background: #e8dfcf;
+  color: #3e3a34;
+}
+
+.contact-btn.facebook:hover {
+  background: #d6cbb7;
+}
+
+footer {
+  background: #fffaf3;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid #e6dccb;
+  margin-top: 40px;
+}
+
+.small-note {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #8a7f6a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-highlight,
+  .services-grid,
+  .about-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-content h2 {
+    font-size: 2.2rem;
+  }
+}
